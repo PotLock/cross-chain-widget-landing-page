@@ -219,7 +219,7 @@ export default function Perfect() {
             </p>
             <div className="relative w-full aspect-[4/3] mb-4">
               <img
-                src="/assets/Socials.svg"
+                src="/assets/Group.svg"
                 alt="Background"
                 className="absolute inset-0 w-full h-full object-cover"
               />
@@ -240,7 +240,7 @@ export default function Perfect() {
             </p>
             <div className="relative w-full aspect-[4/3] mb-4">
               <img
-                src="/assets/Socials.svg"
+                src="/assets/Group.svg"
                 alt="Background"
                 className="absolute inset-0 w-full h-full object-cover"
               />
