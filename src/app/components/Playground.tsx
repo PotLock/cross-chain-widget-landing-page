@@ -263,7 +263,7 @@ export default App;`;
   };
 
   return (
-    <div className="flex flex-col min-h-screen text-black bg-gray-100 sm:flex-row">
+    <div className="flex flex-col min-h-screen text-black bg-white sm:flex-row">
       {/* <div className="w-full p-4 bg-white border-b sm:w-[466px] sm:border-b-0 sm:border-r border-neutral-200 flex flex-col justify-between"> */}
       <div className="w-full p-4 bg-white border-b sm:w-[600px] sm:border-b-0 sm:border-r border-neutral-200 flex flex-col justify-between">
         <div>
@@ -856,13 +856,13 @@ export default App;`}
               id="widget-root"
               className="flex items-center justify-center w-full"
               style={{
-                marginTop: "30px",
+                marginTop: "60px",
               }}
             ></div>
           )}
         </div>
 
-        <div className="flex justify-center mt-auto pt-3 sm:pt-4">
+        <div className="flex justify-center mt-auto pt-68 sm:pt-4 " >
           <p
             className="text-gray-500 text-xs sm:text-sm"
             style={{ fontSize: "0.875rem" }}
