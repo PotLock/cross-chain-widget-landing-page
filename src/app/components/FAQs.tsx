@@ -25,7 +25,47 @@ export default function FAQs() {
       answer:
         "There are no additional fees beyond standard network transaction costs.",
     },
+
+
+    {
+        question: "Is there a testnet deployment?",
+        answer:
+          "There's no testnet deployment and no plans for it. We recommend testing on NEAR mainnet with using separate dev/test NEAR accounts.",
+      },
+      {
+        question: "Is there support for native NEAR deposits?",
+        answer:
+          "Only  ft_transfer_call can be used to deposit NEP-141 tokens from Near to intents.near",
+      },
+      {
+        question: "tx_hash in the recent_deposit response for all SOL deposits is empty",
+        answer:
+          "This information is not available for Solana because the mechanism of deposit tracking works a bit differently there.",
+      },
+      {
+        question: "Is there a reason why my UTXOs aren't being swept on the BTC ? I sent 5,000 sats",
+        answer:
+          `The deposit process begins once the transfer transaction on the foreign network has been completed.  When the balance of the user's unique deposit address has become positive our indexer generates a deposit event and assigns it a PENDING status.
+
+          The next step is collecting the current tokens in storage. The result of this process will be either a COMPLETED or FAILED status. Deposits with a FAILED status are currently handled manually and eventually updated to the COMPLETED status.
+          
+          On EVM networks, deposits can bypass the PENDING status due to the faster processing and transfer completion times.
+          
+          The data structure for the PENDING and FAILED statuses is identical to that of the COMPLETED status.
+          
+          Regarding BTC deposits: If you want to make a deposit to an account that hasn’t yet been connected to the application - this is possible but requires extreme caution. You can request a deposit address by calling the bridge API (deposit_address) and specifying the account_id parameter. The account_id can be a NEAR account, an EVM address, or a SOL address to which you have access.
+          
+          It is recommended starting with a small amount for experimentation. After the deposit is completed, you can connect wallet and check the tokens.`,
+      },
+      {
+        question: "ETH-connector migration",
+        answer:
+          "Because of the split of ETH-connector, auroracontract now acts as a NEP-141 proxy to eth.bridge.near.",
+      },
   ];
+
+  //
+
 
   return (
     <div className=" bg-white flex items-center justify-center py-16 px-4">

@@ -27,7 +27,7 @@ body {
 
 @layer utilities {
   .animate-carousel-left {
-    animation: carouselLeft 30s linear infinite;
+    animation: carouselLeft 60s linear infinite;
   }
 
   @keyframes carouselLeft {
