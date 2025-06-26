@@ -37,7 +37,6 @@ export default function HeroSection() {
             View Documentation
           </a>
         </Link>
- 
       </div>
       <div className="relative flex flex-col md:flex-row gap-6 mb-12">
         <img src="/assets/Qrcode.svg" />
@@ -62,8 +61,16 @@ export default function HeroSection() {
               ...avatars,
               ...avatars,
               ...avatars,
+              ...avatars,
+            
             ].map((avatar, index) => {
-              if (index === 16 || index === 6 || index === 3) {
+              const originalIndex = index % avatars.length;
+
+              if (
+                originalIndex === 3 ||
+                originalIndex === 6 ||
+                originalIndex === 16
+              ) {
                 return (
                   <div
                     key={`badge-${index}`}
@@ -97,40 +104,57 @@ export default function HeroSection() {
         </div>
 
         <div
-          className="block md:hidden flex flex-wrap justify-center gap-6"
-          style={{ width: "90%" }}
+          className="block md:hidden  w-full overflow-hidden"
+          style={{ width: "100%" }}
         >
-          {[...avatars].map((avatar, index) => {
-            if (index === 16 || index === 6 || index === 3) {
-              return (
-                <div
-                  key={`badge-${index}`}
-                  className="flex-none flex flex-col items-center -mt-12"
-                  style={{ gap: "5px" }}
-                >
+          <div className="flex animate-carousel-left whitespace-nowrap mt-12">
+            {[
+              ...avatars,
+              ...avatars,
+              ...avatars,
+              ...avatars,
+              ...avatars,
+              ...avatars,
+              ...avatars,
+
+            ].map((avatar, index) => {
+              const originalIndex = index % avatars.length;
+
+              if (
+                originalIndex === 3 ||
+                originalIndex === 6 ||
+                originalIndex === 16
+              ) {
+                return (
+                  <div
+                    key={`badge-${index}`}
+                    className="flex-none flex flex-col items-center -mt-12"
+                    style={{ gap: "5px" }}
+                  >
+                    <img
+                      src="/assets/Badge.svg"
+                      alt="Badge"
+                      className="w-[100px] h-auto object-contain"
+                    />
+                    <img
+                      src={avatar}
+                      alt={`Avatar ${index + 1}`}
+                      className="w-[56px] h-[56px] rounded-full inline-block mx-2"
+                    />
+                  </div>
+                );
+              } else {
+                return (
                   <img
-                    src="/assets/Badge.svg"
-                    alt="Badge"
-                    className="w-[100px] h-auto object-contain"
-                  />
-                  <img
+                    key={index}
                     src={avatar}
                     alt={`Avatar ${index + 1}`}
-                    className="w-[56px] h-[56px] rounded-full inline-block mx-2"
+                    className="w-12 h-12 rounded-full inline-block mx-2"
                   />
-                </div>
-              );
-            } else {
-              return (
-                <img
-                  key={index}
-                  src={avatar}
-                  alt={`Avatar ${index + 1}`}
-                  className="w-12 h-12 rounded-full inline-block mx-2"
-                />
-              );
-            }
-          })}
+                );
+              }
+            })}
+          </div>
         </div>
       </div>
     </section>
