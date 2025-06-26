@@ -116,7 +116,7 @@ export default function Perfect() {
 
           <div className="block md:hidden bg-white p-6 rounded-xl shadow-sm">
             <div className="flex flex-row items-center gap-2  mb-3">
-              <img src="/assets/info.svg" alt="Background" />
+              <img src="/assets/Info.svg" alt="Background" />
               <h2
                 className="text-lg font-semibold text-gray-900"
                 style={{ fontSize: 16 }}
@@ -140,7 +140,7 @@ export default function Perfect() {
 
           <div className="hidden md:block custom-card3  bg-white p-6 rounded-xl shadow-sm">
             <div className="flex flex-row items-center gap-2 mb-5">
-              <img src="/assets/info.svg" alt="Background" />
+              <img src="/assets/Info.svg" alt="Background" />
               <h2 className="text-lg font-semibold text-gray-900">
                 API Payments
               </h2>
