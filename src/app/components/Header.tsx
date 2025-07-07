@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -14,7 +13,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 py-3 sm:px-8 sm:py-4 border-b bg-white shadow-sm">
+      <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 py-3 sm:px-8 sm:py-4 bg-white">
         <Link href="/" legacyBehavior>
           <div className="flex items-center">
             <span className="text-black font-bold text-xl">🫕 POTLOCK</span>
@@ -29,7 +28,11 @@ export default function Header() {
             Features
           </button>
           <Link href="https://example.widget.potlock.org" legacyBehavior>
-            <a className="text-gray-700 hover:text-gray-900" target="_blank" rel="noopener noreferrer">
+            <a
+              className="text-gray-700 hover:text-gray-900"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Example
             </a>
           </Link>
@@ -123,7 +126,6 @@ export default function Header() {
   );
 }
 
-
 // "use client";
 
 // import Link from "next/link";
@@ -213,7 +215,7 @@ export default function Header() {
 //               >
 //                 Features
 //               </Link>
-              
+
 //               <Link href="https://docs.potlock.io/" legacyBehavior>
 //                 <a
 //                   className="block text-gray-700 hover:text-gray-900 py-4 text-2xl"
@@ -238,14 +240,3 @@ export default function Header() {
 //     </header>
 //   );
 // }
-
-
-
-
-
-
-
-
-
-
-
