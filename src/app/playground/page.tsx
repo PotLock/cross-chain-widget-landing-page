@@ -6,7 +6,9 @@ export default function Home() {
   return (
     <div className="bg-white">
       <Header />
-      <Playground />
+      <main className="container mx-auto">
+        <Playground />
+      </main>
       <Footer />
     </div>
   );

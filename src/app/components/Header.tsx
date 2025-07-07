@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -14,8 +13,8 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 py-3 sm:px-8 sm:py-4 border-b bg-white shadow-sm">
-        <Link href="/">
+      <header className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 py-3 sm:px-8 sm:py-4 bg-white">
+        <Link href="/" legacyBehavior>
           <div className="flex items-center">
             <span className="text-black font-bold text-xl">🫕 POTLOCK</span>
           </div>
@@ -29,12 +28,16 @@ export default function Header() {
             Features
           </button>
           <Link href="https://example.widget.potlock.org" legacyBehavior>
-            <a className="text-gray-700 hover:text-gray-900" target="_blank" rel="noopener noreferrer">
+            <a
+              className="text-gray-700 hover:text-gray-900"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Example
             </a>
           </Link>
         </nav>
-        <Link href="/playground">
+        <Link href="/playground" legacyBehavior>
           <button className="hidden md:block bg-black text-white w-[150px] h-[48px] gap-2.5 rounded-xl p-0 flex items-center justify-center transition-all duration-300 hover:scale-105 hover:bg-gray-900">
             Playground
           </button>
@@ -122,7 +125,6 @@ export default function Header() {
     </>
   );
 }
-
 
 // "use client";
 
@@ -213,7 +215,7 @@ export default function Header() {
 //               >
 //                 Features
 //               </Link>
-              
+
 //               <Link href="https://docs.potlock.io/" legacyBehavior>
 //                 <a
 //                   className="block text-gray-700 hover:text-gray-900 py-4 text-2xl"
@@ -238,14 +240,3 @@ export default function Header() {
 //     </header>
 //   );
 // }
-
-
-
-
-
-
-
-
-
-
-
