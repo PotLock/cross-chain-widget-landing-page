@@ -16,7 +16,7 @@ export default function Start() {
           It’s fast, flexible, and designed to help you achieve your goals.
         </p>
         <div className="space-x-4">
-          <Link href="/playground">
+          <Link href="/playground" legacyBehavior>
             <button className="bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition md:px-6 md:py-3 sm:px-5 sm:py-2 px-4 py-2">
               Get Started →
             </button>

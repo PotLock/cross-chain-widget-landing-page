@@ -19,7 +19,7 @@ export default function HeroSection() {
         wallet.
       </p>
       <div className="flex flex-col md:flex-row gap-4 mb-12">
-        <Link href="/playground">
+        <Link href="/playground" legacyBehavior>
           <button
             className="bg-black text-white px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:bg-gray-800"
             style={{ borderRadius: 15 }}
