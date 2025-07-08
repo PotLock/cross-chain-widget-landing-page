@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { SupportedChains } from "./supported-chains";
 
 export function Hero() {
   return (
@@ -34,6 +35,8 @@ export function Hero() {
         height={510}
         className="w-full max-w-[1105px] h-auto object-cover pointer-events-none"
       />
+
+      <SupportedChains />
     </section>
   );
 }

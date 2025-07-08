@@ -1,11 +1,13 @@
 import { Hero } from "@/components/landing/hero";
-import { SupportedChains } from "@/components/landing/supported-chains";
+import { KeyAdvantages } from "@/components/landing/key-advantages";
+import { TakePayments } from "@/components/landing/take-payments";
 
 export default function LandingPage() {
   return (
-    <div className="container flex flex-col items-center justify-center py-12">
+    <div className="container flex flex-col items-center justify-center py-12 gap-28">
       <Hero />
-      <SupportedChains />
+      <TakePayments />
+      <KeyAdvantages />
     </div>
   );
 }

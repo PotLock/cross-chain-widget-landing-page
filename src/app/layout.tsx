@@ -4,6 +4,7 @@ import {
   Geist_Mono,
   Mona_Sans,
   Plus_Jakarta_Sans,
+  Inter,
 } from "next/font/google";
 import "./globals.css";
 
@@ -27,6 +28,11 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
 });
 
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: "Cross-chain Widget",
   description: "POTLOCK Cross-chain Widget",
@@ -40,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${monaSans.variable} ${plusJakartaSans.variable} font-sans antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${monaSans.variable} ${plusJakartaSans.variable} ${inter.variable} font-sans antialiased`}
       >
         {children}
       </body>
