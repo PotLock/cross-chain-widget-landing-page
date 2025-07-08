@@ -20,8 +20,9 @@ export function Hero() {
           </p>
 
           <div className="flex shrink-0 items-center justify-center gap-5">
-            <Button className="w-40">
-              Get Started <ArrowRight />
+            <Button className="w-40 group">
+              Get Started{" "}
+              <ArrowRight className="group-hover:translate-x-1 transition-transform duration-300 ease-in-out" />
             </Button>
             <Button variant="outline">View Documentation</Button>
           </div>

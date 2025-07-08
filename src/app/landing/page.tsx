@@ -1,5 +1,6 @@
 import { Hero } from "@/components/landing/hero";
 import { KeyAdvantages } from "@/components/landing/key-advantages";
+import { PerfectForAnyUseCase } from "@/components/landing/perfect";
 import { TakePayments } from "@/components/landing/take-payments";
 
 export default function LandingPage() {
@@ -8,6 +9,7 @@ export default function LandingPage() {
       <Hero />
       <TakePayments />
       <KeyAdvantages />
+      <PerfectForAnyUseCase />
     </div>
   );
 }

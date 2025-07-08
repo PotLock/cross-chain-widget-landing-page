@@ -39,7 +39,7 @@ export function Header() {
             <li key={route.name}>
               <Link
                 href={route.href}
-                className="text-gray-900 hover:text-gray-600 font-plus-jakarta-sans font-medium text-base"
+                className="text-gray-900 hover:text-gray-600 hover:underline font-plus-jakarta-sans font-medium text-base"
               >
                 {route.name}
               </Link>
