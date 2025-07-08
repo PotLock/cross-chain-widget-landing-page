@@ -30,7 +30,7 @@ export function Header() {
           className="h-6 w-auto object-cover pointer-events-none"
           priority
         />
-        <p className="font-bold text-lg">POTLOCK</p>
+        <p className="font-bold text-lg text-neutral-950">POTLOCK</p>
       </Link>
 
       <nav>
