@@ -35,7 +35,7 @@ export function TakePayments() {
       className="container flex flex-col items-center gap-6 md:gap-8 px-4 md:px-8 lg:px-16"
     >
       <h2 className="text-[#161612] max-w-[691.873px] text-center font-sans text-2xl md:text-3xl lg:text-4xl font-bold leading-8 md:leading-9 lg:leading-10 tracking-[-0.9px]">
-        Take payments without worry about wallets and chainsp
+        Take payments without worry about wallets and chains
       </h2>
 
       <div className="grid grid-cols-1 w-full md:max-w-fit md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
