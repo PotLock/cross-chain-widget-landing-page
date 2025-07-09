@@ -49,111 +49,48 @@ export default function HeroSection() {
           SUPPORTED CHAINS & ASSETS
         </p>
 
-        <div
-          className="hidden md:block w-full overflow-hidden"
-          style={{ width: "100%" }}
-        >
+        <div className="w-full overflow-hidden">
           <div className="flex animate-carousel-left whitespace-nowrap mt-12">
-            {[
-              ...avatars,
-              ...avatars,
-              ...avatars,
-              ...avatars,
-              ...avatars,
-              ...avatars,
-              ...avatars,
-            
-            ].map((avatar, index) => {
-              const originalIndex = index % avatars.length;
+            {Array.from({ length: 3 }, (_, setIndex) => 
+              avatars.map((avatar, index) => {
+                const uniqueKey = `${setIndex}-${index}`;
+                const originalIndex = index;
+                const hasBadge = originalIndex === 3 || originalIndex === 6 || originalIndex === 16;
 
-              if (
-                originalIndex === 3 ||
-                originalIndex === 6 ||
-                originalIndex === 16
-              ) {
-                return (
-                  <div
-                    key={`badge-${index}`}
-                    className="flex-none flex flex-col items-center -mt-12"
-                    style={{ gap: "5px" }}
-                  >
+                if (hasBadge) {
+                  return (
+                    <div
+                      key={`badge-${uniqueKey}`}
+                      className="flex-none flex flex-col items-center -mt-12"
+                      style={{ gap: "5px" }}
+                    >
+                      <img
+                        src="/assets/Badge.svg"
+                        alt="Badge"
+                        className="w-[75px] md:w-[100px] h-auto object-contain"
+                        loading="lazy"
+                      />
+                      <img
+                        src={avatar}
+                        alt={`Avatar ${index + 1}`}
+                        className="w-10 h-10 md:w-[56px] md:h-[56px] rounded-full inline-block mx-2"
+                        loading="lazy"
+                      />
+                    </div>
+                  );
+                } else {
+                  return (
                     <img
-                      src="/assets/Badge.svg"
-                      alt="Badge"
-                      className="w-[100px] h-auto object-contain"
-                    />
-                    <img
+                      key={uniqueKey}
                       src={avatar}
                       alt={`Avatar ${index + 1}`}
-                      className="w-[56px] h-[56px] rounded-full inline-block mx-2"
+                      className="w-10 h-10 md:w-12 md:h-12 rounded-full inline-block mx-2"
+                      loading="lazy"
                     />
-                  </div>
-                );
-              } else {
-                return (
-                  <img
-                    key={index}
-                    src={avatar}
-                    alt={`Avatar ${index + 1}`}
-                    className="w-12 h-12 rounded-full inline-block mx-2"
-                  />
-                );
-              }
-            })}
-          </div>
-        </div>
-
-        <div
-          className="block md:hidden  w-full overflow-hidden"
-          style={{ width: "100%" }}
-        >
-          <div className="flex animate-carousel-left whitespace-nowrap mt-12">
-            {[
-              ...avatars,
-              ...avatars,
-              ...avatars,
-              ...avatars,
-              ...avatars,
-              ...avatars,
-              ...avatars,
-
-            ].map((avatar, index) => {
-              const originalIndex = index % avatars.length;
-
-              if (
-                originalIndex === 3 ||
-                originalIndex === 6 ||
-                originalIndex === 16
-              ) {
-                return (
-                  <div
-                    key={`badge-${index}`}
-                    className="flex-none flex flex-col items-center -mt-12"
-                    style={{ gap: "5px" }}
-                  >
-                    <img
-                      src="/assets/Badge.svg"
-                      alt="Badge"
-                      className="w-[100px] h-auto object-contain"
-                    />
-                    <img
-                      src={avatar}
-                      alt={`Avatar ${index + 1}`}
-                      className="w-[56px] h-[56px] rounded-full inline-block mx-2"
-                    />
-                  </div>
-                );
-              } else {
-                return (
-                  <img
-                    key={index}
-                    src={avatar}
-                    alt={`Avatar ${index + 1}`}
-                    className="w-12 h-12 rounded-full inline-block mx-2"
-                  />
-                );
-              }
-            })}
+                  );
+                }
+              })
+            ).flat()}
           </div>
         </div>
       </div>

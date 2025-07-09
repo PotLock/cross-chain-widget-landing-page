@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export function CTA() {
   return (
@@ -22,18 +23,26 @@ export function CTA() {
         </h2>
 
         <p className="text-black text-xl md:text-2xl lg:text-4xl font-normal leading-7 md:leading-8 lg:leading-[50px] tracking-[-0.9px] text-center">
-          Start accepting cross-chain support today with the POTLOCK widget.
+          Start accepting cross-chain payments today with the POTLOCK widget.
           It's fast, flexible, and designed to help you achieve your goals.
         </p>
 
         <div className="mt-2.5 flex flex-col sm:flex-row shrink-0 items-center justify-center gap-3 sm:gap-5">
-          <Button className="w-40 group">
-            Get Started{" "}
-            <ArrowRight className="group-hover:translate-x-1 transition-transform duration-300 ease-in-out" />
-          </Button>
-          <Button variant="outline" className="w-40">
-            Contact Us
-          </Button>
+          <Link href="/playground">
+            <Button className="w-40 group">
+              Get Started{" "}
+              <ArrowRight className="group-hover:translate-x-1 transition-transform duration-300 ease-in-out" />
+            </Button>
+          </Link>
+          <Link
+            href="https://t.me/+tYetPhCN1sRkNzYx"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="outline" className="w-40">
+              Contact Us
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
