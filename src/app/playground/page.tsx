@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <div className="bg-white">
+    <div className="bg-white w-full">
       <Header />
       <main className="container mx-auto">
         <Playground />

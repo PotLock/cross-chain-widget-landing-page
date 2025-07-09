@@ -1,23 +1,23 @@
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import KeySection from "./components/Keysection";
-import Everything from "./components/Everything";
-import Perfect from "./components/Perfect";
-import Start from "./components/Start";
-import FAQs from "./components/FAQs";
-import Footer from "./components/Footer";
+import { Footer } from "@/components/footer";
+import { CTA } from "@/components/landing/cta";
+import { FAQs } from "@/components/landing/faqs";
+import { Hero } from "@/components/landing/hero";
+import { KeyAdvantages } from "@/components/landing/key-advantages";
+import { PerfectForAnyUseCase } from "@/components/landing/perfect";
+import { TakePayments } from "@/components/landing/take-payments";
 
-export default function Home() {
+export default function LandingPage() {
   return (
-    <div className="bg-white">
-      <Header />
-      <Hero />
-      <KeySection />
-      <Everything />
-      <Perfect />
-      <Start />
+    <>
+      <div className="container flex flex-col items-center justify-center py-12 gap-28">
+        <Hero />
+        <TakePayments />
+        <KeyAdvantages />
+        <PerfectForAnyUseCase />
+      </div>
+      <CTA />
       <FAQs />
       <Footer />
-    </div>
+    </>
   );
 }
