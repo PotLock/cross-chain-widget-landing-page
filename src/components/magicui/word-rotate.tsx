@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion, MotionProps } from "motion/react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -26,6 +26,8 @@ export function WordRotate({
   startDelay = 0,
 }: WordRotateProps) {
   const [index, setIndex] = useState(0);
+  const [maxWidth, setMaxWidth] = useState(0);
+  const measureRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     let interval: NodeJS.Timeout;
@@ -42,17 +44,44 @@ export function WordRotate({
     };
   }, [words, duration, startDelay]);
 
+  // Measure the width of all words to find the maximum
+  useEffect(() => {
+    if (measureRef.current) {
+      let max = 0;
+      words.forEach(word => {
+        if (measureRef.current) {
+          measureRef.current.textContent = word;
+          const width = measureRef.current.getBoundingClientRect().width;
+          max = Math.max(max, width);
+        }
+      });
+      setMaxWidth(max);
+    }
+  }, [words, className]);
+
   return (
-    <span className="relative inline-block align-baseline">
-      <AnimatePresence mode="wait">
-        <motion.span
-          key={words[index]}
-          className={cn("inline-block", className)}
-          {...motionProps}
-        >
-          {words[index]}
-        </motion.span>
-      </AnimatePresence>
-    </span>
+    <>
+      {/* Hidden span to measure word widths */}
+      <span
+        ref={measureRef}
+        className={cn("invisible absolute whitespace-nowrap", className)}
+        style={{ top: -9999, left: -9999 }}
+      />
+      
+      <span 
+        className="relative inline-block align-baseline"
+        style={{ minWidth: maxWidth || 'auto' }}
+      >
+        <AnimatePresence mode="wait">
+          <motion.span
+            key={words[index]}
+            className={cn("inline-block", className)}
+            {...motionProps}
+          >
+            {words[index]}
+          </motion.span>
+        </AnimatePresence>
+      </span>
+    </>
   );
 }
