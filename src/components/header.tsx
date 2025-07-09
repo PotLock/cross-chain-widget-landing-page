@@ -49,7 +49,7 @@ export function Header() {
       </nav>
 
       <Link href="/playground">
-        <Button className="w-[150px] h-12 font-bold text-base font-plus-jakarta-sans">
+        <Button className="w-[150px] rounded-xl h-12 font-bold text-base font-plus-jakarta-sans">
           Playground
         </Button>
       </Link>

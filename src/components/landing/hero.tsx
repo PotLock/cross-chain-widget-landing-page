@@ -20,7 +20,7 @@ export function Hero() {
           </p>
 
           <div className="flex shrink-0 items-center justify-center gap-5">
-            <Button className="w-40 group">
+            <Button className="w-40 rounded-xl group">
               Get Started{" "}
               <ArrowRight className="group-hover:translate-x-1 transition-transform duration-300 ease-in-out" />
             </Button>

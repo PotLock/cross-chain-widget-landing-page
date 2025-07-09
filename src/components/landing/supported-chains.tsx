@@ -24,7 +24,7 @@ export function SupportedChains() {
       </p>
 
       <Carousel
-        className="w-full"
+        className="w-full max-w-[1009px]"
         opts={{
           loop: true,
         }}

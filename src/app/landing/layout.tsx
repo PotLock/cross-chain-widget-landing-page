@@ -9,7 +9,9 @@ export default function LandingLayout({ children }: LandingLayoutProps) {
   return (
     <div className="flex flex-col items-center min-h-screen">
       <Header />
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 flex flex-col items-center w-full">
+        {children}
+      </main>
       <Footer />
     </div>
   );
