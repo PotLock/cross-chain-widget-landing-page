@@ -1,4 +1,5 @@
 import { CTA } from "@/components/landing/cta";
+import { FAQs } from "@/components/landing/faqs";
 import { Hero } from "@/components/landing/hero";
 import { KeyAdvantages } from "@/components/landing/key-advantages";
 import { PerfectForAnyUseCase } from "@/components/landing/perfect";
@@ -14,6 +15,7 @@ export default function LandingPage() {
         <PerfectForAnyUseCase />
       </div>
       <CTA />
+      <FAQs />
     </>
   );
 }

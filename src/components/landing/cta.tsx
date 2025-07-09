@@ -5,7 +5,7 @@ export function CTA() {
   return (
     <section
       id="CTA"
-      className="flex flex-col items-center justify-center w-full gap-11 py-25"
+      className="flex flex-col items-center justify-center w-full gap-11 py-25 my-25"
       style={
         {
           "--bg-image": "url(/images/cta-bg.png)",
