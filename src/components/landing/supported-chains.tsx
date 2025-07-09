@@ -46,7 +46,7 @@ export function SupportedChains() {
               return (
                 <CarouselItem
                   key={`badge-${index}`}
-                  className="flex flex-col mt-6 items-center basis-1/9 md:basis-1/18 relative"
+                  className="flex flex-col mt-6 items-center basis-1/12 md:basis-1/16 relative"
                 >
                   <Image
                     src="/assets/Badge.svg"
@@ -69,7 +69,7 @@ export function SupportedChains() {
             return (
               <CarouselItem
                 key={index}
-                className="basis-1/9 md:basis-1/18 mt-6"
+                className="basis-1/12 md:basis-1/16 mt-6"
               >
                 <Image
                   src={avatar}
