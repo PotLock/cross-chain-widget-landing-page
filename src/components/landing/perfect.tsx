@@ -74,22 +74,22 @@ export function PerfectForAnyUseCase() {
   return (
     <section
       id="perfect-for-any-use-case"
-      className="container flex flex-col items-center gap-11 px-16"
+      className="container flex flex-col items-center gap-6 md:gap-8 lg:gap-11 px-4 md:px-8 lg:px-16"
     >
       <div className="flex flex-col items-center justify-center gap-4 max-w-[1280px]">
-        <h2 className="text-[#161612] max-w-[691.873px] text-center font-sans text-4xl font-bold leading-10 tracking-[-0.9px]">
+        <h2 className="text-[#161612] max-w-[691.873px] text-center font-sans text-2xl md:text-3xl lg:text-4xl font-bold leading-8 md:leading-9 lg:leading-10 tracking-[-0.9px]">
           Perfect for Any Use Case
         </h2>
 
-        <p className="text-black text-xl font-normal leading-7 tracking-[-0.6px] text-center">
+        <p className="text-black text-lg md:text-xl font-normal leading-6 md:leading-7 tracking-[-0.6px] text-center">
           From non profits to content creators, our widget adapts to your needs.{" "}
         </p>
       </div>
 
-      <div className="grid grid-cols-12 gap-5.5 gap-y-8 max-w-[1121px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 md:gap-5 lg:gap-5.5 gap-y-6 md:gap-y-7 lg:gap-y-8 max-w-[1121px]">
         {cardItems.map((item, index) => {
-          const colSpan7 = "col-span-7";
-          const colSpan5 = "col-span-5";
+          const colSpan7 = "col-span-1 md:col-span-1 lg:col-span-7";
+          const colSpan5 = "col-span-1 md:col-span-1 lg:col-span-5";
 
           let colSpanClass;
 
@@ -116,7 +116,7 @@ export function PerfectForAnyUseCase() {
                   "0px 1px 2px 0px rgba(16, 24, 27, 0.30), 0px 6px 8px 0px rgba(25, 14, 14, 0.03), 0px 8px 12px 0px rgba(12, 22, 25, 0.04)",
               }}
             >
-              <div className="flex flex-col justify-center gap-6 max-w-[478.25px] ps-7.5 pt-6.5 pb-4.5">
+              <div className="flex flex-col justify-center gap-4 md:gap-6 max-w-[478.25px] ps-4 md:ps-6 lg:ps-7.5 pt-4 md:pt-5 lg:pt-6.5 pb-3 md:pb-4 lg:pb-4.5">
                 <div className="flex items-center gap-4">
                   {item.icon}
                   <CardTitle className="text-lg font-inter font-medium text-black tracking-[-0.54px]">

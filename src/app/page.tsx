@@ -9,7 +9,7 @@ import { TakePayments } from "@/components/landing/take-payments";
 export default function LandingPage() {
   return (
     <>
-      <div className="container flex flex-col items-center justify-center py-12 gap-28">
+      <div className="container flex flex-col items-center justify-center py-6 md:py-12 gap-12 md:gap-20 lg:gap-28 overflow-x-clip md:overflow-x-auto">
         <Hero />
         <TakePayments />
         <KeyAdvantages />

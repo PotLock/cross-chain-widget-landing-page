@@ -37,14 +37,14 @@ export function FAQs() {
   return (
     <section
       id="faqs"
-      className="container flex flex-col items-center gap-16 px-16"
+      className="container flex flex-col items-center gap-8 md:gap-12 lg:gap-16 px-4 md:px-8 lg:px-16"
     >
       <div className="flex flex-col items-center justify-center gap-4 max-w-[768px]">
-        <h2 className="text-[#161612] max-w-[691.873px] text-center font-sans text-4xl font-bold leading-10 tracking-[-0.9px]">
+        <h2 className="text-[#161612] max-w-[691.873px] text-center font-sans text-2xl md:text-3xl lg:text-4xl font-bold leading-8 md:leading-9 lg:leading-10 tracking-[-0.9px]">
           Frequently asked questions
         </h2>
 
-        <p className="text-gray-500 text-xl font-normal leading-7 tracking-[-0.6px] text-center">
+        <p className="text-gray-500 text-lg md:text-xl font-normal leading-6 md:leading-7 tracking-[-0.6px] text-center">
           Find answers to common questions about the POTLOCK Cross Chain
           Donation Widget.
         </p>

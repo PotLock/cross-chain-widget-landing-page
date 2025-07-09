@@ -32,17 +32,17 @@ export function TakePayments() {
   return (
     <section
       id="take-payments"
-      className="container flex flex-col items-center gap-8 px-16"
+      className="container flex flex-col items-center gap-6 md:gap-8 px-4 md:px-8 lg:px-16"
     >
-      <h2 className="text-[#161612] max-w-[691.873px] text-center font-sans text-4xl font-bold leading-10 tracking-[-0.9px]">
+      <h2 className="text-[#161612] max-w-[691.873px] text-center font-sans text-2xl md:text-3xl lg:text-4xl font-bold leading-8 md:leading-9 lg:leading-10 tracking-[-0.9px]">
         Take payments without worry about wallets and chainsp
       </h2>
 
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {cardItems.map((card) => (
           <Card
             key={card.title}
-            className="rounded-3xl border-2 bg-white max-w-[362px] min-h-[391px] justify-between flex flex-col items-center h-full px-8.5 py-6"
+            className="rounded-3xl border-2 overflow-clip bg-white w-full max-w-[362px] min-h-[391px] justify-between flex flex-col items-center h-full px-4 md:px-8.5 py-6"
             style={{
               boxShadow:
                 "0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px -1px rgba(0, 0, 0, 0.10)",
