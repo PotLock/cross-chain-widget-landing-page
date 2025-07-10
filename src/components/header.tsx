@@ -5,16 +5,20 @@ import { Button } from "./ui/button";
 type Route = {
   name: string;
   href: string;
+  target?: string;
+  rel?: string;
 };
 
 const routes: Route[] = [
   {
     name: "Features",
-    href: "/#features",
+    href: "/#key-advantages",
   },
   {
     name: "Documentation",
-    href: "/documentation",
+    href: "https://docs.potlock.io/",
+    target: "_blank",
+    rel: "noopener noreferrer",
   },
 ];
 
@@ -40,6 +44,8 @@ export function Header() {
               <Link
                 href={route.href}
                 className="text-gray-900 hover:text-gray-600 hover:underline font-plus-jakarta-sans font-medium text-base"
+                target={route.target}
+                rel={route.rel}
               >
                 {route.name}
               </Link>
