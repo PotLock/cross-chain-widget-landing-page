@@ -19,7 +19,7 @@ export function SupportedChains() {
       id="supported-chains"
       className="flex flex-col items-center justify-center w-full"
     >
-      <p className="text-base leading-7 font-normal tracking-[0%] text-center text-[#71717a]">
+      <p className="text-base leading-7 mb-2 font-normal tracking-[0%] text-center text-[#71717a]">
         SUPPORTED CHAINS & ASSETS
       </p>
 
@@ -43,25 +43,18 @@ export function SupportedChains() {
           )
             .flat()
             .map(({ avatar, uniqueKey, originalIndex }) => {
-              const hasBadge =
-                originalIndex === 3 ||
-                originalIndex === 6 ||
-                originalIndex === 16;
+              // Put coming soon badge
+              const hasBadge = originalIndex === 16 || originalIndex === 3;
 
               return (
                 <CarouselItem
                   key={uniqueKey}
-                  className="flex flex-col items-center justify-center basis-[75px] pt-8 relative min-h-[75px]"
+                  className="flex flex-col items-center justify-center basis-[75px] pt-6 relative"
                 >
                   {hasBadge && (
-                    <Image
-                      src="/assets/Badge.svg"
-                      alt="Badge"
-                      width={100}
-                      height={100}
-                      className="w-[75px] h-auto object-contain absolute top-0 left-1/2 -translate-x-[calc(50%-8px)] pointer-events-none z-10"
-                      loading="lazy"
-                    />
+                    <div className="text-center text-xs absolute inset-0 w-24 bg-black/5 backdrop-blur-sm rounded-full h-fit">
+                      <p className="shrink-0 font-medium">Coming Soon</p>
+                    </div>
                   )}
                   <Image
                     src={avatar}

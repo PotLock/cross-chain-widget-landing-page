@@ -108,7 +108,7 @@ export function PerfectForAnyUseCase() {
             <Card
               key={index}
               className={cn(
-                "flex flex-col gap-0 p-0 rounded-[8px] border bg-white",
+                "flex flex-col gap-0 p-0 overflow-clip rounded-[8px] border bg-white transition-all duration-300 hover:shadow-xl hover:shadow-black/5 hover:-translate-y-1 hover:scale-[1.02] cursor-pointer group",
                 colSpanClass
               )}
               style={{
@@ -118,12 +118,14 @@ export function PerfectForAnyUseCase() {
             >
               <div className="flex flex-col justify-center gap-4 md:gap-6 max-w-[478.25px] ps-4 md:ps-6 lg:ps-7.5 pt-4 md:pt-5 lg:pt-6.5 pb-3 md:pb-4 lg:pb-4.5">
                 <div className="flex items-center gap-4">
-                  {item.icon}
-                  <CardTitle className="text-lg font-inter font-medium text-black tracking-[-0.54px]">
+                  <div className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                    {item.icon}
+                  </div>
+                  <CardTitle className="text-lg font-inter font-medium text-black tracking-[-0.54px] transition-colors duration-300 group-hover:text-blue-600">
                     {item.title}
                   </CardTitle>
                 </div>
-                <CardDescription className="text-base leading-[150%] tracking-[-0.32px] font-inter text-[#7A8B90]">
+                <CardDescription className="text-base leading-[150%] tracking-[-0.32px] font-inter text-[#7A8B90] transition-colors duration-300 group-hover:text-gray-600">
                   {item.description}
                 </CardDescription>
               </div>
@@ -132,7 +134,7 @@ export function PerfectForAnyUseCase() {
                 alt={item.title}
                 width={500}
                 height={300}
-                className="w-full h-auto rounded-b-[8px] object-cover flex-1"
+                className="w-full h-auto rounded-b-[8px] object-cover flex-1 transition-transform duration-300 group-hover:scale-105"
               />
             </Card>
           );

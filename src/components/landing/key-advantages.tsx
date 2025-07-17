@@ -64,7 +64,7 @@ export function KeyAdvantages() {
         {keyAdvantageItems.map((item, index) => (
           <Card
             key={index}
-            className="rounded-3xl border bg-white flex flex-col items-center gap-1.5 p-0"
+            className="rounded-3xl border bg-white flex overflow-clip flex-col items-center gap-1.5 p-0 transition-all duration-300 hover:shadow-lg hover:shadow-black/10 hover:-translate-y-1 cursor-pointer group"
             style={{
               boxShadow:
                 "0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px -1px rgba(0, 0, 0, 0.10)",
@@ -75,13 +75,13 @@ export function KeyAdvantages() {
               alt={item.title}
               width={100}
               height={100}
-              className="w-full h-auto object-cover rounded-t-3xl"
+              className="w-full h-auto object-cover rounded-t-3xl transition-all duration-300 group-hover:scale-105"
             />
-            <div className="flex flex-col px-4 md:px-7.5 py-5 items-start h-[129px] gap-0 text-left">
-              <h3 className="text-[#161612] text-xl font-bold font-inter leading-[130%]">
+            <div className="flex flex-col px-4 md:px-7.5 py-5 items-start min-h-[129px] gap-2 text-left">
+              <h3 className="text-[#161612] text-xl font-bold font-inter leading-[130%] transition-colors duration-300 group-hover:text-blue-600">
                 {item.title}
               </h3>
-              <p className="text-[#70747B] h-[62px] flex items-center text-sm font-normal leading-[150%]">
+              <p className="text-[#70747B] flex-1 flex items-start text-sm font-normal leading-[150%] transition-colors duration-300 group-hover:text-gray-600">
                 {item.description}
               </p>
             </div>

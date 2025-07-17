@@ -15,10 +15,8 @@ const routes: Route[] = [
     href: "/#key-advantages",
   },
   {
-    name: "Documentation",
-    href: "https://docs.potlock.io/",
-    target: "_blank",
-    rel: "noopener noreferrer",
+    name: "Example",
+    href: "https://example.widget.potlock.org",
   },
 ];
 
@@ -43,7 +41,7 @@ export function Header() {
             <li key={route.name}>
               <Link
                 href={route.href}
-                className="text-gray-900 hover:text-gray-600 hover:underline font-plus-jakarta-sans font-medium text-base"
+                className="text-gray-900 hover:text-gray-600 hover:underline font-plus-jakarta-sans font-medium text-base transition-colors duration-200"
                 target={route.target}
                 rel={route.rel}
               >
@@ -55,7 +53,7 @@ export function Header() {
       </nav>
 
       <Link href="/playground">
-        <Button className="w-[120px] md:w-[150px] rounded-xl h-10 md:h-12 font-bold text-sm md:text-base font-plus-jakarta-sans">
+        <Button className="w-[120px] md:w-[150px] rounded-xl h-10 md:h-12 font-bold text-sm md:text-base font-plus-jakarta-sans transition-all duration-200 hover:scale-105">
           Playground
         </Button>
       </Link>
