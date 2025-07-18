@@ -5,7 +5,9 @@ import { Copy, Check } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+
+import Link from "next/link";
+import Image from "next/image";
 
 interface WidgetConfig {
   address: string;
@@ -187,15 +189,22 @@ export default App;`;
       <CardHeader className="pb-4">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="grid w-full grid-cols-2 h-12 p-1">
-            <TabsTrigger value="preview" className="h-10 px-6">Live Preview</TabsTrigger>
-            <TabsTrigger value="embed" className="h-10 px-6">Embedded Code</TabsTrigger>
+            <TabsTrigger value="preview" className="h-10 px-6">
+              Live Preview
+            </TabsTrigger>
+            <TabsTrigger value="embed" className="h-10 px-6">
+              Embedded Code
+            </TabsTrigger>
           </TabsList>
         </Tabs>
       </CardHeader>
 
       <CardContent className="flex-1 flex flex-col">
         <Tabs value={activeTab} className="flex-1 flex flex-col">
-          <TabsContent value="preview" className="flex-1 flex items-center justify-center mt-0">
+          <TabsContent
+            value="preview"
+            className="flex-1 flex items-center justify-center mt-0"
+          >
             <div
               id="widget-root"
               className="flex items-center justify-center w-full min-h-[200px]"
@@ -207,7 +216,9 @@ export default App;`;
               <Card>
                 <CardHeader className="pb-3">
                   <div className="flex items-center justify-between">
-                    <CardTitle className="text-base">HTML Embeddable Code</CardTitle>
+                    <CardTitle className="text-base">
+                      HTML Embeddable Code
+                    </CardTitle>
                     <Button
                       variant="ghost"
                       size="sm"
@@ -259,11 +270,25 @@ export default App;`;
       </CardContent>
 
       <div className="p-6 pt-0 mt-auto">
-        <div className="flex items-center justify-center text-sm text-muted-foreground">
-          Powered by{" "}
-          <Badge variant="secondary" className="ml-2">
-            🫕 POTLOCK
-          </Badge>
+        <div className="flex gap-2 items-center justify-center text-sm text-muted-foreground">
+          <span>Powered by</span>
+          <Link
+            href="https://potlock.org"
+            title="Potlock"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-200"
+          >
+            <Image
+              src="/images/potlock-logo.png"
+              alt="Potlock Logo"
+              width={150}
+              height={50}
+              className="h-6 w-auto object-cover pointer-events-none"
+              priority
+            />
+            <span className="font-bold">POTLOCK</span>
+          </Link>
         </div>
       </div>
     </Card>

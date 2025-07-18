@@ -1,5 +1,5 @@
 import Playground from "../components/Playground";
-import Footer from "../components/Footer";
+import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (

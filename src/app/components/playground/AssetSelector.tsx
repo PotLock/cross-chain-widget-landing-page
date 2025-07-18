@@ -21,12 +21,12 @@ interface AssetSelectorProps {
   className?: string;
 }
 
-export function AssetSelector({ 
-  value, 
-  onChange, 
-  tokens, 
+export function AssetSelector({
+  value,
+  onChange,
+  tokens,
   placeholder = "Select which asset you want to receive.",
-  className 
+  className,
 }: AssetSelectorProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -34,7 +34,10 @@ export function AssetSelector({
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false);
       }
     };
@@ -58,25 +61,29 @@ export function AssetSelector({
   return (
     <div className={cn("space-y-2", className)}>
       <Label>Asset Type</Label>
-      
+
       <div className="relative" ref={dropdownRef}>
         <div
           onClick={() => setIsOpen(!isOpen)}
           className="flex h-12 w-full items-center justify-between rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm cursor-pointer hover:bg-accent hover:text-accent-foreground transition-colors"
         >
-          <span className={cn(
-            "truncate",
-            value === placeholder ? "text-muted-foreground" : "text-foreground"
-          )}>
+          <span
+            className={cn(
+              "truncate",
+              value === placeholder
+                ? "text-muted-foreground"
+                : "text-foreground"
+            )}
+          >
             {displayValue}
           </span>
           <ChevronDown className="h-4 w-4 opacity-50" />
         </div>
-        
+
         {isOpen && (
           <div className="absolute top-full left-0 right-0 z-50 mt-1">
-            <Card className="max-h-60 overflow-hidden">
-              <CardHeader className="pb-2">
+            <Card className="max-h-60 pt-4 gap-2 overflow-hidden">
+              <CardHeader>
                 <CardTitle className="text-sm">Available Tokens</CardTitle>
               </CardHeader>
               <CardContent className="p-0">
@@ -91,8 +98,8 @@ export function AssetSelector({
                     />
                   </div>
                 </div>
-                
-                <div className="max-h-40 overflow-y-auto">
+
+                <div className="max-h-40 pb-8 overflow-y-auto">
                   {filteredTokens?.map((token, index) => (
                     <div
                       key={index}
@@ -104,7 +111,7 @@ export function AssetSelector({
                       </span>
                     </div>
                   ))}
-                  
+
                   {filteredTokens?.length === 0 && (
                     <div className="px-3 py-2 text-sm text-muted-foreground">
                       No tokens found

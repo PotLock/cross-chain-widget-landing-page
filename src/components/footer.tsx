@@ -189,13 +189,19 @@ export function Footer() {
       <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row justify-between items-center">
         <div className="flex flex-1 basis-0 space-x-4 mb-4 md:mb-0">
           <Link
-            href="/#"
+            href="https://www.potlock.org/privacy"
+            title="Privacy Policy"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-gray-600 hover:text-gray-900 text-sm transition-colors duration-200"
           >
             Privacy Policy
           </Link>
           <Link
-            href="/#"
+            href="https://www.potlock.org/license"
+            title="Terms of use"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-gray-600 hover:text-gray-900 text-sm transition-colors duration-200"
           >
             Terms of use
@@ -307,7 +313,10 @@ export function Footer() {
       <p className="inline-flex items-center gap-2 text-center text-base md:text-lg text-neutral-900">
         With ❤️ from
         <Link
-          href="/"
+          href="https://potlock.org"
+          title="Potlock"
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center gap-2 hover:opacity-80 transition-opacity duration-200"
         >
           <Image
