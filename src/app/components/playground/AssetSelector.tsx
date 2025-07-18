@@ -47,7 +47,7 @@ export function AssetSelector({
   }, []);
 
   const filteredTokens = tokens?.filter((token) =>
-    token.symbol.toLowerCase().includes(searchQuery.toLowerCase())
+    token.symbol.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
   const handleSelect = (assetId: string) => {
@@ -72,7 +72,7 @@ export function AssetSelector({
               "truncate",
               value === placeholder
                 ? "text-muted-foreground"
-                : "text-foreground"
+                : "text-foreground",
             )}
           >
             {displayValue}

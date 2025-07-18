@@ -18,7 +18,7 @@ export function SocialSharing({
   shareUrl,
   onShareUrlChange,
   link,
-  onLinkChange
+  onLinkChange,
 }: SocialSharingProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -46,10 +46,7 @@ export function SocialSharing({
         />
       </div>
 
-      <Button 
-        onClick={() => setIsModalOpen(true)}
-        className="w-fit"
-      >
+      <Button onClick={() => setIsModalOpen(true)} className="w-fit">
         <Share2 className="w-4 h-4 mr-2" />
         Share
       </Button>

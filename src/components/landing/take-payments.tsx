@@ -42,7 +42,7 @@ export function TakePayments() {
         {cardItems.map((card, index) => (
           <Card
             key={index}
-            className={`rounded-3xl border-2 overflow-clip bg-white w-full ${index === 0 ? 'md:col-span-2 lg:col-span-1 md:max-w-[calc(724px+1.5rem)] lg:max-w-[362px]' : 'md:max-w-[362px]'} min-h-[391px] justify-between flex flex-col items-center h-full px-4 md:px-8.5 py-6 transition-all duration-300 hover:shadow-xl hover:shadow-black/10 hover:-translate-y-2 hover:scale-[1.02] cursor-pointer group`}
+            className={`rounded-3xl border-2 overflow-clip bg-white w-full ${index === 0 ? "md:col-span-2 lg:col-span-1 md:max-w-[calc(724px+1.5rem)] lg:max-w-[362px]" : "md:max-w-[362px]"} min-h-[391px] justify-between flex flex-col items-center h-full px-4 md:px-8.5 py-6 transition-all duration-300 hover:shadow-xl hover:shadow-black/10 hover:-translate-y-2 hover:scale-[1.02] cursor-pointer group`}
             style={{
               boxShadow:
                 "0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px -1px rgba(0, 0, 0, 0.10)",

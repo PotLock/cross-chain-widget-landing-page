@@ -1,20 +1,14 @@
 "use client";
 
 import React from "react";
-import { 
-  Dialog, 
-  DialogContent, 
-  DialogHeader, 
-  DialogTitle 
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { 
-  Facebook, 
-  Twitter, 
-  Linkedin, 
-  MessageCircle, 
-  Copy 
-} from "lucide-react";
+import { Facebook, Twitter, Linkedin, MessageCircle, Copy } from "lucide-react";
 
 interface SocialShareModalProps {
   isOpen: boolean;
@@ -23,14 +17,14 @@ interface SocialShareModalProps {
   link: string;
 }
 
-export function SocialShareModal({ 
-  isOpen, 
-  onClose, 
-  shareUrl, 
-  link 
+export function SocialShareModal({
+  isOpen,
+  onClose,
+  shareUrl,
+  link,
 }: SocialShareModalProps) {
   const shareText = `${shareUrl} ${link}`;
-  
+
   const handleCopyLink = () => {
     navigator.clipboard.writeText(shareUrl);
     alert("Link copied!");
@@ -69,7 +63,7 @@ export function SocialShareModal({
         <DialogHeader>
           <DialogTitle>Share this page</DialogTitle>
         </DialogHeader>
-        
+
         <div className="space-y-3">
           {socialLinks.map((social) => (
             <Button
@@ -78,17 +72,13 @@ export function SocialShareModal({
               className={`w-full justify-start gap-3 h-auto p-3 ${social.className}`}
               asChild
             >
-              <a
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={social.href} target="_blank" rel="noopener noreferrer">
                 {social.icon}
                 <span>Share on {social.name}</span>
               </a>
             </Button>
           ))}
-          
+
           <Button
             variant="ghost"
             className="w-full justify-start gap-3 h-auto p-3 text-gray-600 hover:text-gray-800"

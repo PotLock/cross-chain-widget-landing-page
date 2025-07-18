@@ -3,12 +3,12 @@
 import React from "react";
 import Link from "next/link";
 import { Plus } from "lucide-react";
-import { 
-  Select, 
-  SelectContent, 
-  SelectItem, 
-  SelectTrigger, 
-  SelectValue 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -40,14 +40,16 @@ export function GeneralSettings({
   onAddressChange,
   asset,
   onAssetChange,
-  tokens
+  tokens,
 }: GeneralSettingsProps) {
   return (
     <div className="space-y-6">
       <div className="space-y-2">
         <Label>Donation Target Type</Label>
-        <Select 
-          value={donationTarget === "Select Donation Type" ? "" : donationTarget} 
+        <Select
+          value={
+            donationTarget === "Select Donation Type" ? "" : donationTarget
+          }
           onValueChange={onDonationTargetChange}
         >
           <SelectTrigger className="w-full h-12">
@@ -64,16 +66,14 @@ export function GeneralSettings({
       </div>
 
       {donationTarget === "Direct Account" && (
-        <AssetSelector
-          value={asset}
-          onChange={onAssetChange}
-          tokens={tokens}
-        />
+        <AssetSelector value={asset} onChange={onAssetChange} tokens={tokens} />
       )}
 
       <div className="space-y-2">
         <Label>
-          {donationTarget === "POTLOCK Campaigns" ? "Referral ID" : "Wallet address"}
+          {donationTarget === "POTLOCK Campaigns"
+            ? "Referral ID"
+            : "Wallet address"}
         </Label>
         <Input
           type="text"

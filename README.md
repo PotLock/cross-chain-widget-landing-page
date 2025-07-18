@@ -9,7 +9,6 @@ Welcome to the **POTLOCK Playground Frontend**, an interactive environment desig
 - **Live Preview**: See immediate changes to themes, colors, and configurations.
 - **Responsive Design**: Optimized for desktop and mobile views.
 
-
 ## Installation
 
 ### Prerequisites
@@ -26,10 +25,13 @@ Welcome to the **POTLOCK Playground Frontend**, an interactive environment desig
    cd cross-chain-widget-playground
    ```
 2. Install dependencies:
+
    ```bash
    npm install
    ```
+
    or
+
    ```bash
    yarn install
    ```
@@ -50,29 +52,34 @@ Welcome to the **POTLOCK Playground Frontend**, an interactive environment desig
 - **Test Donation Flow**: Click the "Simulate Donation" button to see the QR code and confirmation process.
 - **Copy Code**: Generate HTML or React code snippets via the "Export Code" button.
 
-
-
 ## Development
 
 ### Building
 
 To build the playground for production:
+
 ```bash
 npm run build
 ```
+
 or
+
 ```bash
 yarn build
 ```
+
 The output will be in the `dist` folder.
 
 ### Running Tests
 
 Run unit tests with:
+
 ```bash
 npm test
 ```
+
 or
+
 ```bash
 yarn test
 ```
@@ -107,4 +114,4 @@ For issues or questions, open an issue on [GitHub](https://github.com/PotLock/cr
 
 ### Last Updated
 
-*This README was last updated at 12:19 PM CDT on Tuesday, June 24, 2025.*
+_This README was last updated at 12:19 PM CDT on Tuesday, June 24, 2025._

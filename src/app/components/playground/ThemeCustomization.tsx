@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import { 
-  Select, 
-  SelectContent, 
-  SelectItem, 
-  SelectTrigger, 
-  SelectValue 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
 } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { ColorPicker } from "./ColorPicker";
@@ -22,13 +22,13 @@ interface ThemeCustomizationProps {
 
 const fontOptions = [
   "Mona Sans",
-  "Arial", 
-  "Helvetica", 
+  "Arial",
+  "Helvetica",
   "Times New Roman",
   "Georgia",
   "Verdana",
   "Trebuchet MS",
-  "Comic Sans MS"
+  "Comic Sans MS",
 ];
 
 export function ThemeCustomization({
@@ -37,7 +37,7 @@ export function ThemeCustomization({
   buttonColor,
   onButtonColorChange,
   buttonFont,
-  onButtonFontChange
+  onButtonFontChange,
 }: ThemeCustomizationProps) {
   return (
     <div className="space-y-6">

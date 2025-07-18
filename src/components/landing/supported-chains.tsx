@@ -39,7 +39,7 @@ export function SupportedChains() {
             avatars.map((avatar, index) => {
               const uniqueKey = `${setIndex}-${index}`;
               return { avatar, uniqueKey, originalIndex: index };
-            })
+            }),
           )
             .flat()
             .map(({ avatar, uniqueKey, originalIndex }) => {

@@ -34,7 +34,7 @@ export function ImageRotate({
 
   useEffect(() => {
     let interval: NodeJS.Timeout;
-    
+
     const startTimer = setTimeout(() => {
       interval = setInterval(() => {
         setIndex((prevIndex) => (prevIndex + 1) % images.length);

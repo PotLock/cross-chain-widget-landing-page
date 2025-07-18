@@ -31,7 +31,7 @@ export function WordRotate({
 
   useEffect(() => {
     let interval: NodeJS.Timeout;
-    
+
     const startTimer = setTimeout(() => {
       interval = setInterval(() => {
         setIndex((prevIndex) => (prevIndex + 1) % words.length);
@@ -48,7 +48,7 @@ export function WordRotate({
   useEffect(() => {
     if (measureRef.current) {
       let max = 0;
-      words.forEach(word => {
+      words.forEach((word) => {
         if (measureRef.current) {
           measureRef.current.textContent = word;
           const width = measureRef.current.getBoundingClientRect().width;
@@ -67,10 +67,10 @@ export function WordRotate({
         className={cn("invisible absolute whitespace-nowrap", className)}
         style={{ top: -9999, left: -9999 }}
       />
-      
-      <span 
+
+      <span
         className="relative inline-block align-baseline"
-        style={{ minWidth: maxWidth || 'auto' }}
+        style={{ minWidth: maxWidth || "auto" }}
       >
         <AnimatePresence mode="wait">
           <motion.span

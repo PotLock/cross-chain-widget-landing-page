@@ -111,61 +111,61 @@ export default function Footer() {
         </div>
 
         <div className="text-center sm:text-right">
-              <div className="flex items-center gap-2">
-                <svg
-                  width="20"
-                  height="12"
-                  viewBox="0 0 20 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7.4 10.6L2.8 6L7.4 1.4L6 0L0 6L6 12L7.4 10.6ZM12.6 10.6L17.2 6L12.6 1.4L14 0L20 6L14 12L12.6 10.6Z"
-                    fill="#292929"
-                  />
-                </svg>
+          <div className="flex items-center gap-2">
+            <svg
+              width="20"
+              height="12"
+              viewBox="0 0 20 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.4 10.6L2.8 6L7.4 1.4L6 0L0 6L6 12L7.4 10.6ZM12.6 10.6L17.2 6L12.6 1.4L14 0L20 6L14 12L12.6 10.6Z"
+                fill="#292929"
+              />
+            </svg>
 
-                <h4 className="text-sm font-semibold text-gray-800 mb-0">
-                  Github repo links
-                </h4>
-              </div>
+            <h4 className="text-sm font-semibold text-gray-800 mb-0">
+              Github repo links
+            </h4>
+          </div>
 
-              <ul className="space-y-1">
-                <li>
-                  <a
-                    href="https://github.com/PotLock/cross-chain-widget"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ color: "#292929", fontWeight: 500 }}
-                    className="text-xs sm:text-sm underline"
-                  >
-                    Cross-Chain Widget
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/PotLock/example_widget_playground"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ color: "#292929", fontWeight: 500 }}
-                    className="text-xs sm:text-sm underline"
-                  >
-                    Widget Playground
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/PotLock/cross-chain-widget-landing-page"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ color: "#292929", fontWeight: 500 }}
-                    className="text-xs sm:text-sm underline"
-                  >
-                    Landing Page
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <ul className="space-y-1">
+            <li>
+              <a
+                href="https://github.com/PotLock/cross-chain-widget"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "#292929", fontWeight: 500 }}
+                className="text-xs sm:text-sm underline"
+              >
+                Cross-Chain Widget
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/PotLock/example_widget_playground"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "#292929", fontWeight: 500 }}
+                className="text-xs sm:text-sm underline"
+              >
+                Widget Playground
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/PotLock/cross-chain-widget-landing-page"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "#292929", fontWeight: 500 }}
+                className="text-xs sm:text-sm underline"
+              >
+                Landing Page
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
   );

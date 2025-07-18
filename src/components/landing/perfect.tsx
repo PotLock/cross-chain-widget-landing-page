@@ -82,7 +82,8 @@ export function PerfectForAnyUseCase() {
         </h2>
 
         <p className="text-black text-lg md:text-xl font-normal leading-6 md:leading-7 tracking-[-0.6px] text-center">
-          From non profits to content creators, our widget adapts to your needs.{" "}
+          From non profits to content creators, our widget adapts to your
+          needs.{" "}
         </p>
       </div>
 
@@ -109,7 +110,7 @@ export function PerfectForAnyUseCase() {
               key={index}
               className={cn(
                 "flex flex-col gap-0 p-0 overflow-clip rounded-[8px] border bg-white transition-all duration-300 hover:shadow-xl hover:shadow-black/5 hover:-translate-y-1 hover:scale-[1.02] cursor-pointer group",
-                colSpanClass
+                colSpanClass,
               )}
               style={{
                 boxShadow:

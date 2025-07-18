@@ -51,11 +51,14 @@ export default function HeroSection() {
 
         <div className="w-full overflow-hidden">
           <div className="flex animate-carousel-left whitespace-nowrap mt-12">
-            {Array.from({ length: 3 }, (_, setIndex) => 
+            {Array.from({ length: 3 }, (_, setIndex) =>
               avatars.map((avatar, index) => {
                 const uniqueKey = `${setIndex}-${index}`;
                 const originalIndex = index;
-                const hasBadge = originalIndex === 3 || originalIndex === 6 || originalIndex === 16;
+                const hasBadge =
+                  originalIndex === 3 ||
+                  originalIndex === 6 ||
+                  originalIndex === 16;
 
                 if (hasBadge) {
                   return (
@@ -89,7 +92,7 @@ export default function HeroSection() {
                     />
                   );
                 }
-              })
+              }),
             ).flat()}
           </div>
         </div>

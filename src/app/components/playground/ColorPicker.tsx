@@ -15,12 +15,12 @@ interface ColorPickerProps {
   className?: string;
 }
 
-export function ColorPicker({ 
-  value, 
-  onChange, 
-  label, 
-  description, 
-  className 
+export function ColorPicker({
+  value,
+  onChange,
+  label,
+  description,
+  className,
 }: ColorPickerProps) {
   const [showPicker, setShowPicker] = useState(false);
   const [color, setColor] = useState(value);
@@ -40,7 +40,7 @@ export function ColorPicker({
           <p className="text-sm text-muted-foreground mt-1">{description}</p>
         )}
       </div>
-      
+
       <div className="flex items-center space-x-2">
         <div
           className="w-12 h-12 rounded-md border border-input shadow-sm cursor-pointer hover:opacity-80 transition-opacity"
@@ -56,13 +56,13 @@ export function ColorPicker({
           readOnly
         />
       </div>
-      
+
       {showPicker && (
         <Card className="w-fit">
           <CardContent className="p-3">
-            <HexColorPicker 
-              color={color} 
-              onChange={handleColorChange} 
+            <HexColorPicker
+              color={color}
+              onChange={handleColorChange}
               className="w-full max-w-[220px]"
             />
           </CardContent>
