@@ -15,8 +15,8 @@ export default function HeroSection() {
         Build a crosschain donation flow for your project w/o coding.
       </h1>
       <p className="text-lg text-gray-600 mb-6">
-        You can now bring cross chain donations as a button with no need for
-        wallet.
+        Bring cross chain donations with just a button and no need for
+        wallets.
       </p>
       <div className="flex flex-col md:flex-row gap-4 mb-12">
         <Link href="/playground" legacyBehavior>
